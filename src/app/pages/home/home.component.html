@@ -1,0 +1,24 @@
+<!-- Mostramos nuesto slide show, solo si recibimos peliculas -->
+
+<!-- Titulo -->
+<div class="container">
+    <h2 class="text-center text-white mt-2">Cartelera</h2>
+    <hr class="text-white text-center mt-1">
+</div>
+
+<!-- Slide Show -->
+<div class="contenedor">
+    <app-slide-show [peliculas]="moviesSliceShow"></app-slide-show>
+</div>
+
+<div class="contenedor">
+    <h3 class="text-white mt-4">Lo mas visto</h3>
+    <hr class="bg-white centrar mb-4 mt-1">
+    <div class="container animate__animated animate__fadeIn">
+    
+        <!-- Mostramos nuestro card, solo si se reciben peliculas-->
+        <app-peliculas-card class="animate__slow" [movies]="movies" *ngIf="movies.length > 0"></app-peliculas-card>
+    </div>
+</div>
+
+<app-footer></app-footer>
